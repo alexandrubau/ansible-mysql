@@ -1,0 +1,4 @@
+---
+- name: Restart
+  include_tasks: handlers/restart.yml
+  listen: restart-mysql

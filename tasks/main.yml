@@ -1,0 +1,29 @@
+---
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+  with_items: "{{ _mysql_packages }}"
+
+- name: Start service
+  service:
+    name: "{{ _mysql_service }}"
+    state: started
+    enabled: yes
+
+- name: Create databases
+  mysql_db:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ mysql_databases }}"
+
+- name: Add users and set privileges
+  mysql_user:
+    name: "{{ item[0].username }}"
+    password: "{{ item[0].password }}"
+    host: "{{ item[1] }}"
+    priv: "{{ item[0].privs | join('/') }}"
+    login_user: root
+    login_password:
+  with_subelements:
+    - "{{ mysql_users }}"
+    - hosts
