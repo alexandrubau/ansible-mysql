@@ -1,4 +1,5 @@
 ---
+_mysql_role: ~
 _mysql_service: mysql
 _mysql_packages:
   - mariadb-server={{ mysql_version }}

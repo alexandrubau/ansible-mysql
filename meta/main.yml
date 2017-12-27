@@ -1,3 +1,4 @@
 ---
-- name: broker
-  src: https://github.com/alexandrubau/ansible-broker.git
+dependencies:
+  - name: broker
+    src: https://github.com/alexandrubau/ansible-broker.git
