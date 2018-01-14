@@ -2,5 +2,5 @@
 _mysql_role: ~
 _mysql_service: mysql
 _mysql_packages:
-  - mariadb-server={{ mysql_version }}
+  - mysql-server={{ mysql_version }}
   - python-mysqldb # required for mysql_db @see http://docs.ansible.com/ansible/latest/mysql_db_module.html#notes

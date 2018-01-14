@@ -1,7 +1,6 @@
 ## MySQL role
 
-Some description for MySQL role would be nice. Any volunteers?  
-We use MariaDb.
+Some description for MySQL role would be nice. Any volunteers?
 
 ### Parameters
 
