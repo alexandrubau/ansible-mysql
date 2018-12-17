@@ -1,8 +1,7 @@
 ---
 - name: Install packages
   apt:
-    name: "{{ item }}"
-  with_items: "{{ _mysql_packages }}"
+    name: "{{ _mysql_packages }}"
 
 - name: Start service
   service:
