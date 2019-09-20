@@ -16,7 +16,7 @@ mysql_version: 10.0.*
 Example:
 ```yaml
 mysql_databases:
- - projectdb
+  - projectdb
 ```
 
 **mysql_users** (type `array`, default `[]`)
@@ -24,11 +24,11 @@ mysql_databases:
 Example:
 ```yaml
 mysql_users:
- - username: 'athena'
-   password: 'athena'
-   privs:
-     - '*.*:ALL,GRANT'
-   hosts:
-     - '%'
-     - 'localhost'
+  - username: 'athena'
+    password: 'athena'
+    privs:
+      - '*.*:ALL,GRANT'
+    hosts:
+      - '%'
+      - 'localhost'
 ```
