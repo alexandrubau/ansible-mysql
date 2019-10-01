@@ -3,12 +3,6 @@
   apt:
     name: "{{ _mysql_packages }}"
 
-- name: Start service
-  service:
-    name: "{{ _mysql_service }}"
-    state: started
-    enabled: yes
-
 - name: Create databases
   mysql_db:
     name: "{{ item }}"
@@ -26,3 +20,9 @@
   with_subelements:
     - "{{ mysql_users }}"
     - hosts
+
+- name: Start service
+  service:
+    name: "{{ _mysql_service }}"
+    state: started
+    enabled: yes
