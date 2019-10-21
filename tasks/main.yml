@@ -14,7 +14,7 @@
     name: "{{ item[0].username }}"
     password: "{{ item[0].password }}"
     host: "{{ item[1] }}"
-    priv: "{{ item[0].privs | join('/') }}"
+    priv: "{{ item[0].privs|join('/') }}"
     login_user: root
     login_password:
   with_subelements:
